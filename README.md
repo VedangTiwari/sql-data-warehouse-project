@@ -80,28 +80,22 @@ For more details, refer to [docs/requirements.md](docs/requirements.md).
 
 📂 Repository Structure
 
-data-warehouse-project/
-│
-├── datasets/                           # Raw datasets used in the project (ERP and CRM data)
-│
-├── docs/                               # Documentation and architecture diagrams
-│   ├── etl.drawio                      # Draw.io file showing ETL techniques and workflows
-│   ├── data_architecture.drawio        # High-level project architecture (source → DWH → consumption)
-│   ├── data_catalog.md                 # Dataset catalog with field definitions & metadata
-│   ├── data_flow.drawio                # Data flow diagram (source → staging → warehouse)
-│   ├── data_models.drawio              # Dimensional models (star schema)
-│   ├── naming-conventions.md           # Standardized naming conventions for tables & fields
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Extract & load raw source data
-│   ├── silver/                         # Cleaned, standardized, model-ready data
-│   ├── gold/                           # Business-ready fact & dimension models
-│
-├── tests/                              # Data quality checks and test scripts
-│
-├── README.md                           # Project overview, setup, and documentation
-├── LICENSE                             # Repository license information
-├── .gitignore                          # Files/directories excluded from version control
-└── requirements.txt                    # Project dependencies (SQL/Python tools, if applicable)
 
-
+- **data-warehouse-project/**
+  - **datasets/** — Raw datasets used in the project (ERP and CRM data)
+  - **docs/** — Documentation and architecture diagrams
+    - `etl.drawio` — Draw.io file showing ETL techniques and workflows
+    - `data_architecture.drawio` — High-level project architecture (source → DWH → consumption)
+    - `data_catalog.md` — Dataset catalog with field definitions & metadata
+    - `data_flow.drawio` — Data flow diagram (source → staging → warehouse)
+    - `data_models.drawio` — Dimensional models (star schema)
+    - `naming-conventions.md` — Standardized naming conventions for tables & fields
+  - **scripts/** — SQL scripts for ETL and transformations
+    - **bronze/** — Extract & load raw source data
+    - **silver/** — Cleaned, standardized, model-ready data
+    - **gold/** — Business-ready fact & dimension models
+  - **tests/** — Data quality checks and test scripts
+  - `README.md` — Project overview, setup, and documentation
+  - `LICENSE` — Repository license information
+  - `.gitignore` — Files/directories excluded from version control
+  - `requirements.txt` — Project dependencies (SQL/Python tools, if applicable)
