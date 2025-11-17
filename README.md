@@ -82,25 +82,26 @@ For more details, refer to [docs/requirements.md](docs/requirements.md).
 
 data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+├── datasets/                           # Raw datasets used in the project (ERP and CRM data)
 │
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+├── docs/                               # Documentation and architecture diagrams
+│   ├── etl.drawio                      # Draw.io file showing ETL techniques and workflows
+│   ├── data_architecture.drawio        # High-level project architecture (source → DWH → consumption)
+│   ├── data_catalog.md                 # Dataset catalog with field definitions & metadata
+│   ├── data_flow.drawio                # Data flow diagram (source → staging → warehouse)
+│   ├── data_models.drawio              # Dimensional models (star schema)
+│   ├── naming-conventions.md           # Standardized naming conventions for tables & fields
 │
 ├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
+│   ├── bronze/                         # Extract & load raw source data
+│   ├── silver/                         # Cleaned, standardized, model-ready data
+│   ├── gold/                           # Business-ready fact & dimension models
 │
-├── tests/                              # Test scripts and quality files
+├── tests/                              # Data quality checks and test scripts
 │
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
+├── README.md                           # Project overview, setup, and documentation
+├── LICENSE                             # Repository license information
+├── .gitignore                          # Files/directories excluded from version control
+└── requirements.txt                    # Project dependencies (SQL/Python tools, if applicable)
+
 
